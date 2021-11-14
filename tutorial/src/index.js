@@ -74,57 +74,33 @@ const Message = () => {
   return <p>You will love this message</p>;
 };
 
+const names = ["ag", "jo", "mn"];
+const newNames = names.map((name) => {
+  return <h1>{name}</h1>;
+});
+console.log(newNames);
+
 const ElectronicsList = (params) => {
-  return (
-    <section className="electronicslist">
-      Your Favourite Electronicssss....
-      <Items warranty="2yrs" />
-      <Items warranty="8yrs" />
-      <Items warranty="9yrs" />
-      <Items warranty="1yrs" />
-      <Items warranty="3yrs" />
-      <Items warranty="9yrs" />
-      <Items
-        title={headset1.title}
-        addsline={headset1.addsline}
-        wirelength={headset1.wirelength}
-      />
-      <Items
-        title={headset2.title}
-        addsline={headset2.addsline}
-        wirelength={headset2.wirelength}
-      >
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, cumque
-          sit. Reprehenderit magnam nisi sed! Nihil sunt aperiam et illum.
-        </p>
-      </Items>
-      <Items
-        title={headset3.title}
-        addsline={headset3.addsline}
-        wirelength={headset3.wirelength}
-      />
-    </section>
-  );
+  return <section className="electronicslist">{newNames}</section>;
 };
 
-const headset1 = {
-  title: "Headset for lovers",
-  addsline: "Very comfy",
-  wirelength: "30cm",
-};
-
-const headset2 = {
-  title: "Headset for singers",
-  addsline: "Very soft",
-  wirelength: "70cm",
-};
-
-const headset3 = {
-  title: "Headset for listeners",
-  addsline: "Very stylish",
-  wirelength: "10cm",
-};
+const headsets = [
+  {
+    title: "Headset for lovers",
+    addsline: "Very comfy",
+    wirelength: "30cm",
+  },
+  {
+    title: "Headset for singers",
+    addsline: "Very soft",
+    wirelength: "70cm",
+  },
+  {
+    title: "Headset for listeners",
+    addsline: "Very stylish",
+    wirelength: "10cm",
+  },
+];
 
 const volume = "30000Hz";
 
