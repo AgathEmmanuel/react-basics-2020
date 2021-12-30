@@ -81,7 +81,31 @@ const newNames = names.map((name) => {
 console.log(newNames);
 
 const ElectronicsList = (params) => {
-  return <section className="electronicslist">{newNames}</section>;
+  return <section className="electronicslist">
+    {headsets.map((headset)=>{
+      const {title,addsline,wirelength,picture}=headset;
+      const clickHandler=()=>{
+        alert('helllooo worllldd');
+      }
+      const complexExample=(author)=>{
+        console.log(author);
+      }
+      return <div className="item" onMouseOver={()=>{
+        console.log(addsline);
+      }}>
+        <h3 onClick={()=>console.log(title)}>{title}</h3>
+        <h3>{addsline}</h3>
+        <h3>{wirelength}</h3>
+        <img
+          src={picture}
+          alt=""
+        />
+        <button type='button' onClick={clickHandler}>
+        reference example
+        </button>
+      </div>
+    })}
+    </section>;
 };
 
 const headsets = [
@@ -89,16 +113,24 @@ const headsets = [
     title: "Headset for lovers",
     addsline: "Very comfy",
     wirelength: "30cm",
+    picture: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSw256S4u1V6GQrn49aAC4BD49BZ5PNqpweA_ZZE5w5ct8WeTtZH4-t3lJOpnhEOVTBfRw&usqp=CAU"
   },
   {
     title: "Headset for singers",
     addsline: "Very soft",
     wirelength: "70cm",
+    picture: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSw256S4u1V6GQrn49aAC4BD49BZ5PNqpweA_ZZE5w5ct8WeTtZH4-t3lJOpnhEOVTBfRw&usqp=CAU"
   },
   {
     title: "Headset for listeners",
     addsline: "Very stylish",
     wirelength: "10cm",
+  },
+  {
+    title: "Headset for llllisteners",
+    addsline: "Very stylish",
+    wirelength: "12cm",
+    picture: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSw256S4u1V6GQrn49aAC4BD49BZ5PNqpweA_ZZE5w5ct8WeTtZH4-t3lJOpnhEOVTBfRw&usqp=CAU"
   },
 ];
 
@@ -139,5 +171,6 @@ const Company = (params) => {
   return <h3>Headset..</h3>;
 };
 
-// ReactDom.render(<Greeting />,document.getElementById('root'))
+//ReactDom.render(<Greeting />,document.getElementById('root'))
 ReactDom.render(<ElectronicsList />, document.getElementById("root"));
+//ReactDom.render(<Items />, document.getElementById("root"));

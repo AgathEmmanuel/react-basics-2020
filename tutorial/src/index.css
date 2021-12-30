@@ -16,18 +16,22 @@ body {
   max-width: 1170px;
   margin: 5rem auto;
   display: grid;
-  gap: 2rem;
+  gap: 2rem 3rem;
+  border: 1px solid black;
 }
 
 @media screen and (min-width: 768px) {
   .electronicslist {
     grid-template-columns: repeat(3, 1fr);
     align-items: start;
+    background-color: ghostwhite;
+    border-radius: 1rem;
+    padding: 1rem 2rem;
   }
 }
 
 .item {
-  background: #fff;
+  background: aqua;
   border-radius: 1rem;
   padding: 1rem 2rem;
 }
